@@ -1,9 +1,4 @@
-import React, { Component } from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router'
-=======
-import './App.css'
->>>>>>> f8a5a052f4e05f2b642f0eb8f8ff84850863ffe1
+import React, { Component } from 'react'
 
 class ServiceBox extends Component {
   // componentWillMount() {
@@ -21,10 +16,7 @@ class ServiceBox extends Component {
     return (
       <div className="ServiceBox-wrapper">
         <div className="box-wrapper">
-          <div className="box">
-            <h1>wat</h1>
-            <Link to="/schedule/wifi-solutions">Wifi Solutions</Link>
-          </div>
+          <div className="box"><h1>wat</h1></div>
           <div className="box"><h1>wat</h1></div>
           <div className="box"><h1>wat</h1></div>
           <div className="box"><h1>wat</h1></div>

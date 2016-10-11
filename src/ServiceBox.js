@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router'
-=======
-import './App.css'
->>>>>>> f8a5a052f4e05f2b642f0eb8f8ff84850863ffe1
 
 class ServiceBox extends Component {
   // componentWillMount() {

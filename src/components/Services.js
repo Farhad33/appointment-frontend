@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ServiceBox from './ServiceBox';
+import ServiceBox from '../ServiceBox';
 
 class Services extends Component {
   render() {

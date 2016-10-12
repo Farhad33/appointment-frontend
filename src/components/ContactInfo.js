@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Form from 'muicss/lib/react/form'
 import Input from 'muicss/lib/react/input'
-import Textarea from 'muicss/lib/react/textarea'
 import Button from 'muicss/lib/react/button'
 import Select from 'muicss/lib/react/select'
 import Option from 'muicss/lib/react/option'

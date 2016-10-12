@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import './App.css'
 import Services from './Services'
+import Progress_bar from './Progress_bar'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Services/>
+        <Progress_bar/>
       </div>
     );
   }

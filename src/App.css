@@ -22,3 +22,80 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/* ~~~~~~~~~~~~~~~~~~ Progress_bar ~~~~~~~~~~~~~~~~~~ */
+.statusBar{
+  background-color:#3399CC;
+  padding-left:124px;
+  padding-top:9px;
+  position:relative;
+  cursor:pointer;
+  color:white;
+  font-size:25px;
+}
+
+.statusBar:hover{
+  color:#FFD800;
+}
+
+.statusBar1stChild{
+  border-radius: 7px 0px 0px 7px;
+}
+
+.Progress_bar{
+  text-align:center;
+  display:flex;
+}
+
+#progressBarContainer{
+  height:46px;
+  text-align:center;
+  display:flex;
+  border-top: 1px solid black;
+  border-bottom: 3px solid green;
+  border-left: 1px solid black;
+  border-right: none;
+  border-radius: 9px 0px 0px 9px;
+}
+
+.triangle-right{
+	width: 0;
+	height: 0;
+	border-top: 24.5px solid #3399CC;
+	border-left: 50px solid black;
+	border-bottom: 22px solid #3399CC;
+}
+
+.triangle-right-border{
+	width: 0;
+	height: 0;
+	border-top: 23px solid transparent;
+	border-left: 48px solid #3399CC;
+	border-bottom: 23px solid transparent;
+  margin-top:-23px;
+  margin-left:-50px;
+  position:absolute;
+}
+
+#triangle-LastChild{
+  width: 0;
+  height: 2px;
+  border-top: 24.5px solid transparent;
+  border-left: 50px solid black;
+  border-bottom: 24px solid transparent;
+}
+
+#statusBar-LastChild{
+  border-top: 1px solid black;
+  border-bottom: 3px solid red;
+  height: 36.5px;
+}
+
+#triangle-right-border-container{
+  border-bottom:5px solid orange;
+  background-color:red;
+  z-index:10;
+  height:3em;
+  position:relative;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~ */

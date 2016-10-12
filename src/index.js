@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory } from 'react-router'
 
 import Services from './Services'
+import Progress_bar from './Progress_bar'
 
 ReactDOM.render((
   <Router history={ browserHistory }>

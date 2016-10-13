@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import calender from './calender'
-import moment from 'moment'
+import React, { Component } from 'react'
 
 
 export default class DayInput extends Component {

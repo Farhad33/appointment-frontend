@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-// import TimeBlock from './TimeBlock'
-import TimeSlot from './TimeSlot'
-import moment from 'moment'
+import React, { Component } from 'react'
+
 
 
 export default class DayInput extends Component {

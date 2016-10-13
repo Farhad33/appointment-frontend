@@ -1,38 +1,94 @@
-import React, { Component } from 'react'
-import Form from 'muicss/lib/react/form'
-import Input from 'muicss/lib/react/input'
-import Button from 'muicss/lib/react/button'
-import Select from 'muicss/lib/react/select'
-import Option from 'muicss/lib/react/option'
+import React from 'react';
+import { Popover, Button, Tooltip, Modal, OverlayTrigger, tooltip, popover, FieldGroup, FormGroup, FormControl, ControlLabel, InputGroup  } from 'react-bootstrap'
 
-class ContactInfo extends Component {
-  render() { 
-    return <div className="contact-container">
-        <Form>
-          <legend>Contact Info</legend>
-          <Input label="First Name" required={true} />
-          <Input label="Last Name" required={true} />
-          <Input label="Address" type="text" floatingLabel={true} required={true} />
-          <Select defaultValue="City">
-            <Option value="oakland" label="Oakland" />
-            <Option value="san-francisco" label="San Francisco" />
-            <Option value="berkeley" label="Berkeley" />
-            <Option value="daly-city" label="Daly City" />
-          </Select>
-          <Select defaultValue="State">
-            <Option value="california" label="California" />
-            <Option value="nevada" label="Nevada" />
-            <Option value="washington" label="Washington" />
-            <Option value="oregon" label="Oregon" />
-          </Select>
-          <Input label="Zip Code" type="tel" floatingLabel={true} required={true} />
-          <Input label="Phone Number" type="tel" floatingLabel={true} required={true} />
-          <Input label="Required Email Address" type="email" floatingLabel={true} required={true} />
-          <Input label="Password" type="password" floatingLabel={true} required={true} />
-          <Button variant="raised">Submit</Button>
-        </Form>
-      </div>
-  }
-}
+const ContactInfo = React.createClass({
+  getInitialState() {
+    return { showModal: false };
+  },
 
-export default ContactInfo 
+  close() {
+    this.setState({ showModal: false });
+  },
+
+  open() {
+    this.setState({ showModal: true });
+  },
+
+  render() {
+    const popover = (
+      <Popover id="modal-popover" title="popover">
+        very popover. such engagement
+      </Popover>
+    );
+    const tooltip = (
+      <Tooltip id="modal-tooltip">
+        wow.
+      </Tooltip>
+    )
+
+  return (
+    <div>
+      <p>Click to get the full Modal experience!</p>
+
+      <Button
+        bsStyle="primary"
+        bsSize="large"
+        onClick={this.open}
+      >
+        Launch demo modal
+      </Button>
+
+      <Modal show={this.state.showModal} onHide={this.close}>
+        <Modal.Header closeButton>
+          <Modal.Title>Contact Information</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          {formInstance}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button onClick={this.close}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
+ } 
+});
+
+const formInstance = (
+  <form>
+    <FormGroup>
+      <FormControl className="form-style" type="text" placeholder="First Name" />
+      <FormControl className="form-style" type="text" placeholder="Last Name" />
+      <FormControl className="form-style" type="text" placeholder="Email" />
+      <FormControl className="form-style" type="tel" placeholder="Phone Number" />
+      <FormControl className="form-style" type="text" placeholder="Address" />
+    </FormGroup>
+    <FormGroup controlId="formControlsSelectMultiple">
+      <ControlLabel>City</ControlLabel>
+      <FormControl className="form-style item" componentClass="select" multiple>
+        <option value="select">Alameda</option>
+        <option value="other">blah</option>
+        <option value="other">blah</option>
+        <option value="other">blah</option>
+        <option value="other">blah</option>
+        <option value="other">blah</option>
+      </FormControl>
+        <FormControl className="form-style item" type="number" placeholder="Zip Code" />
+      </FormGroup>
+      <FormGroup controlId="formControlsSelect">
+        <ControlLabel>State</ControlLabel>
+        <FormControl className="form-style" componentClass="select" placeholder="select">
+          <option value="select">California</option>
+          <option value="other">...</option>
+        </FormControl>
+        <FormGroup controlId="formControlsTextarea">
+          <ControlLabel>Description of the Problem</ControlLabel>
+          <FormControl componentClass="textarea" placeholder="textarea" />
+        </FormGroup>
+      </FormGroup>
+  </form>
+);
+
+
+
+export default ContactInfo;

@@ -6,6 +6,9 @@ import Services from './components/Services'
 import Schedule from './scheduler/Schedule'
 import ContactInfo from './components/ContactInfo'
 
+
+
+
 // class App extends Component {
 //   constructor(props) {
 //     super(props)
@@ -35,8 +38,10 @@ import ContactInfo from './components/ContactInfo'
 // }
 
 const App = (props) => {
-  return <ContactInfo />
-   
+  return (
+    <ContactInfo />,
+    <Services />
+  )
 }
 
 export default App

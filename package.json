@@ -8,10 +8,11 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
-    "muicss": "^0.9.1",
     "moment": "^2.15.1",
+    "muicss": "^0.9.1",
     "node-fetch": "^1.6.3",
     "react": "^15.3.2",
+    "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
     "react-router": "^2.6.1"
   },

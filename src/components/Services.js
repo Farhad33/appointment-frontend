@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import ServiceBox from './ServiceBox';
-<<<<<<< HEAD:src/components/Services.js
 import ContactInfo from './ContactInfo';
-=======
-import Progress_bar from './Progress_bar'
->>>>>>> progress-bar:src/Services.js
+import Progress_bar from '../Progress_bar'
 
 class Services extends Component {
   render() {
